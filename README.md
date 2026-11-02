@@ -15,7 +15,7 @@
     <img alt="Execution environments" src="https://img.shields.io/badge/targets-macOS%20%2B%20Linux-258D89?style=flat-square" />
   </p>
 
-  [Architecture](docs/ARCHITECTURE.md) · [Verification model](docs/VERIFICATION.md) · [Research](#research-directions) · [MacBrains Labs](https://macbrainslabs.org/)
+  [Evidence pipeline](docs/EVIDENCE_PIPELINE.md) · [Architecture](docs/ARCHITECTURE.md) · [Verification model](docs/VERIFICATION.md) · [Research](#research-directions) · [MacBrains Labs](https://macbrainslabs.org/)
 </div>
 
 ---
@@ -48,6 +48,24 @@ ANVIL coordinates work without pretending that agents share a memory, filesystem
 | **V · Verification** | Tie correctness claims to exact inputs, source revisions, artifacts, tests, and host-observed outcomes. |
 | **I · Integration** | Treat an end-to-end working workflow as the deliverable, not a collection of individually successful components. |
 | **L · Lineage** | Preserve the relationships among tasks, attempts, sessions, ownership, decisions, and outcomes. |
+
+## Evidence pipeline: from observation to defensible research
+
+**Evidence is part of ANVIL's execution architecture, not an after-the-fact report.** The research workflow distinguishes source material, observations, claims, review judgments, and permission to publish. A scientifically plausible model response is not by itself a verified result; a verified result is not by itself an authorized external release.
+
+```text
+Research inputs → evidence catalog → provenance-bound receipts
+    → claim qualification → independent review and reproducibility
+    → native prepublication testing [in qualification]
+    → separately authorized publication [not production-accepted]
+    → external readback and citation verification
+```
+
+The observed system includes structured research records, review visibility, explicit publication-eligibility blockers, and durable acknowledgement of evidence events. ANVIL also has an existing deny-by-default Swift agent sandbox. **The dedicated native publication-testing sandbox and cryptographically fenced publication authority remain qualification work**, distinct from the implemented catalog and evidence-delivery capabilities.
+
+This separation matters: a model may propose a finding; evidence supports or challenges it; independent checks assess it; a separate authority determines whether publishing is allowed; and external readback—not an internal success message—establishes the actual public effect.
+
+[Read the evidence pipeline and publication qualification model](docs/EVIDENCE_PIPELINE.md).
 
 ## Logical architecture
 
@@ -101,6 +119,7 @@ ANVIL sits at the intersection of several engineering disciplines:
 | **Native agent runtimes** | Swift-first system integration, typed interfaces, bounded tool execution, and lifecycle management. |
 | **Distributed coordination** | Task ownership, session lineage, cross-host execution, recovery, and control-plane authority. |
 | **Verification infrastructure** | Exact-source tests, provenance, independent checks, evidence quality, and deployment acceptance. |
+| **Research evidence and publication control** | Cataloged observations, durable provenance receipts, independent qualification, native prepublication testing research, and release authority separated from model inference. |
 | **Heterogeneous compute** | Routing between Apple Silicon-specific operations and portable Linux execution without hiding host differences. |
 | **Human-visible autonomy** | Inspectable, interruptible work with clear authority boundaries and traceable outcomes. |
 
@@ -111,6 +130,7 @@ The broader Apple Neural Engine and Core ML research has its own [public methods
 | Document | Contents |
 | :-- | :-- |
 | [Public architecture](docs/ARCHITECTURE.md) | Logical planes, identity, authority, execution boundaries, and recovery behavior. |
+| [Evidence pipeline](docs/EVIDENCE_PIPELINE.md) | Research evidence provenance, qualification, native sandbox maturity, and guarded publication acceptance. |
 | [Verification model](docs/VERIFICATION.md) | Evidence taxonomy, acceptance levels, and the distinction between source and production claims. |
 | [Security and disclosure](SECURITY.md) | Public-documentation scope and security contact. |
 
