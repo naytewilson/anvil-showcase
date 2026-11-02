@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="336" viewBox="0 0 1200 336" role="img" aria-labelledby="title desc">
+  <title id="title">ANVIL — Agent Operating System</title>
+  <desc id="desc">A luminous copper anvil emblem and ANVIL wordmark on a midnight blue technical grid.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080F20"/>
+      <stop offset="58%" stop-color="#12162B"/>
+      <stop offset="100%" stop-color="#21182D"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE4B5"/>
+      <stop offset="33%" stop-color="#FFC675"/>
+      <stop offset="72%" stop-color="#E78748"/>
+      <stop offset="100%" stop-color="#BF5940"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFBC73"/>
+      <stop offset="58%" stop-color="#D88A72"/>
+      <stop offset="100%" stop-color="#78DDD1"/>
+    </linearGradient>
+    <radialGradient id="halo">
+      <stop offset="0%" stop-color="#F6A76E" stop-opacity=".22"/>
+      <stop offset="80%" stop-color="#F6A76E" stop-opacity=".045"/>
+      <stop offset="100%" stop-color="#F6A76E" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#9CB2CC" stroke-width=".65" opacity=".09"/>
+    </pattern>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1200" height="336" rx="22" fill="url(#background)"/>
+  <rect x="0" y="0" width="1200" height="336" rx="22" fill="url(#grid)"/>
+  <circle cx="197" cy="161" r="183" fill="url(#halo)"/>
+  <path d="M0 280C264 180 432 408 734 230S1056 104 1200 154" fill="none" stroke="#78DDD1" stroke-opacity=".07" stroke-width="2"/>
+  <path d="M762 0L1051 336M938 0L1200 279" stroke="#F8BF7A" stroke-opacity=".045" stroke-width="2"/>
+  <g fill="none" stroke="#8BD7CD">
+    <circle cx="199" cy="168" r="116" stroke-opacity=".20" stroke-width="1.5"/>
+    <circle cx="199" cy="168" r="98" stroke-opacity=".10" stroke-dasharray="3 9"/>
+    <path d="M199 34V48M199 288V302M65 168H79M319 168H333" stroke-opacity=".50" stroke-width="2"/>
+  </g>
+  <g transform="translate(94 76)">
+    <path d="M22 86H57L84 65H174L192 77L184 92H155L144 126H86L69 98H54C41 98 30 94 22 86Z" fill="#EA9865" opacity=".27" filter="url(#glow)"/>
+    <path d="M22 86H57L84 65H174L192 77L184 92H155L144 126H86L69 98H54C41 98 30 94 22 86Z" fill="url(#metal)"/>
+    <path d="M83 126H146L154 154H75Z" fill="#C77752"/>
+    <path d="M63 154H168Q173 154 173 159V168H58V159Q58 154 63 154Z" fill="#FDB777"/>
+    <path d="M83 65H172" stroke="#FFF3D5" stroke-opacity=".75" stroke-width="4" stroke-linecap="round"/>
+    <path d="M45 86H75" stroke="#FFF3D5" stroke-opacity=".50" stroke-width="3" stroke-linecap="round"/>
+    <path d="M113 40L115 29M133 48L145 37M93 46L83 35" stroke="#83E8DA" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="114" cy="18" r="3" fill="#83E8DA"/>
+  </g>
+  <rect x="358" y="60" width="49" height="4" rx="2" fill="#80E1D2"/>
+  <text x="425" y="69" fill="#A9B8CF" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="3.5">THE ENGINEERING CONTROL PLANE</text>
+  <text x="352" y="186" fill="#F5F5F8" font-family="Arial, Helvetica, sans-serif" font-size="113" font-weight="800" letter-spacing="10">ANVIL</text>
+  <rect x="359" y="210" width="650" height="3" rx="1.5" fill="url(#accent)"/>
+  <text x="359" y="258" fill="#DFE6F2" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" letter-spacing="2.3">AUTONOMOUS AGENT OPERATING SYSTEM</text>
+  <text x="361" y="295" fill="#8E9EB6" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="2">COORDINATE  /  EXECUTE  /  VERIFY  /  REMEMBER</text>
+  <g fill="#83E8DA">
+    <circle cx="1093" cy="63" r="4" opacity=".8"/>
+    <circle cx="1117" cy="63" r="4" opacity=".35"/>
+    <circle cx="1141" cy="63" r="4" opacity=".15"/>
+  </g>
+  <path d="M1060 299H1147M1147 299V261" fill="none" stroke="#78DDD1" stroke-opacity=".38" stroke-width="2"/>
+  <circle cx="1147" cy="259" r="4" fill="#78DDD1" opacity=".7"/>
+  <rect x="1" y="1" width="1198" height="334" rx="21" fill="none" stroke="#B4C3E2" stroke-opacity=".16" stroke-width="2"/>
+</svg>
