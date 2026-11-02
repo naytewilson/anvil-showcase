@@ -2,7 +2,7 @@
 
 > **Scope:** conceptual systems architecture. This document is deliberately not an API specification, database schema, deployment guide, network diagram, security configuration, or claim that every design objective is installed and verified.
 
-[← Project overview](../README.md) · [Verification model](VERIFICATION.md)
+[← Project overview](../README.md) · [Verification model](VERIFICATION.md) · [Evidence pipeline](EVIDENCE_PIPELINE.md)
 
 ## 1. System boundary
 
@@ -75,7 +75,28 @@ ANVIL treats several kinds of source truth as independent:
 
 A passing portable test is evidence about its tested configuration. It does not imply installation on every host. An installed service is not automatically proof that an end-user workflow functions. For acceptance criteria, see [the verification model](VERIFICATION.md).
 
-## 5. Heterogeneous execution
+## 5. Evidence-to-publication trust boundary
+
+Research evidence is not ordinary task telemetry. ANVIL's research workflow maintains a conceptual separation between **capturing an observation**, **qualifying a claim**, and **authorizing a public release**.
+
+The observed implementation includes a structured research catalog, provenance-aware event delivery, durable receipts, and a research review surface that exposes publication blockers rather than silently treating incomplete evidence as eligible. This is the evidence side of the system; publication authority is independently constrained.
+
+```mermaid
+flowchart LR
+    E["Evidence / source provenance"] --> Q["Review & qualification"]
+    Q --> S["Native prepublication checks\n(in qualification)"]
+    S --> A["Separate release authority\n(candidate)"]
+    A --> X["External publication effect\n(not production-accepted)"]
+    Q --> H["HOLD on conflicts or missing proof"]
+    S --> H
+    A --> H
+```
+
+The research runner's **Swift-native deny-by-default sandbox** is an existing agent-execution control. It is **not** proof that the purpose-built publication test environment is installed or has passed the full acceptance matrix. Likewise, source-level cryptographic signature and transaction-fencing tests do not establish production publication readiness.
+
+See the [evidence pipeline](EVIDENCE_PIPELINE.md) for provenance, scientific qualification, and the separate publishing effect boundary.
+
+## 6. Heterogeneous execution
 
 The architecture recognizes a practical asymmetry:
 
@@ -87,7 +108,7 @@ A sound routing decision considers the **required capability, evidence obligatio
 
 The public diagram does not disclose actual host inventory, addresses, queues, storage layouts, or trust configuration.
 
-## 6. Failure model
+## 7. Failure model
 
 | Failure class | Intended engineering response |
 | :-- | :-- |
@@ -101,7 +122,7 @@ The public diagram does not disclose actual host inventory, addresses, queues, s
 
 This table is a design rationale, not a published statement that every failure class has been exhaustively tested.
 
-## 7. Research constraints
+## 8. Research constraints
 
 This repository omits the material that would be necessary to reproduce ANVIL as a running system: code, configuration, internal contracts, security controls, real task state, endpoints, and private operational records. The omissions are intentional.
 
