@@ -2,7 +2,7 @@
 
 > **Purpose:** define how a claim about an autonomous system should be supported. This is a public methodological description, not a certification report for the private ANVIL deployment.
 
-[← Project overview](../README.md) · [Architecture](ARCHITECTURE.md)
+[← Project overview](../README.md) · [Architecture](ARCHITECTURE.md) · [Evidence pipeline](EVIDENCE_PIPELINE.md)
 
 ## Verification is a chain, not a status badge
 
@@ -57,6 +57,17 @@ Benchmarks should disclose workload, shape, machine class, toolchain, measuremen
 For numerical systems research, useful checks include absolute error, relative error, numerical stability, output parity, and runtime placement. Which metric matters depends on the actual claim. ANVIL's public showcase does not imply that independent ANE research measurements are agent-orchestration benchmarks.
 
 Related published examples and methodology are maintained separately by [MacBrains Labs](https://macbrainslabs.org/research/) and its [methods documentation](https://macbrainslabs.org/methods/).
+
+## Scientific qualification and publishing authority
+
+ANVIL's research evidence pipeline adds two independent conditions beyond ordinary software verification:
+
+1. **Claim qualification:** the underlying sources, methods, measurements, exact artifacts, review record, and uncertainty must justify the scientific statement being made.
+2. **Release qualification:** a distinct, current authorization must permit the specific publication effect; producing or approving a finding does not implicitly grant that authority.
+
+The observed research surface can retain **explicit eligibility blockers** for findings that are not qualified for release. Native agent sandbox controls already exist in ANVIL source, but the **dedicated prepublication test sandbox** is still being qualified. Separately, source-level cryptographic signing and transaction-fenced publication authority are under review rather than production-accepted.
+
+A deterministic test, signature, or model-review receipt can be necessary evidence without constituting scientific validation. Conversely, scientifically credible research does not justify publishing without explicit release authority and independent external readback. See [the full evidence pipeline](EVIDENCE_PIPELINE.md).
 
 ## Evidence precedence and conflict resolution
 
